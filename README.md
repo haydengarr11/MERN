@@ -2,7 +2,7 @@
   This social media application is used as a full stack project
 
 ## `App.js`
-    contains the main applicaiton alongside `index.js`
+    contains the main applicaiton alongside index.js
 
 
 
