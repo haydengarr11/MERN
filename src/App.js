@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import { Container, AppBar, Typography, Grow, Grid } from '@material-ui/core';
+import { Container, AppBar, Typography, Grow, Grid } from '@mui/material';
 import { useDispatch } from 'react-redux';
 
 import { getPosts } from './actions/posts';
@@ -10,7 +10,7 @@ import memories from './images/memories.png';
 
 
 const App = () => {
-    const classes = useStyles();
+    const { classes } = useStyles();
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -19,9 +19,9 @@ const App = () => {
 
     return (
         <Container maxidth="lg">
-            <AppBar className={classes.AppBar} appposition="static" color="inherit">
-                <Typography className={classes.heading} variant="h2" align="center">Memories</Typography>
-                <img src={memories} alt="memories" height="60" />
+            <AppBar className={classes.appBar} appposition="static" color="inherit">
+                <Typography className={classes.heading} variant="h2" align="center">Wangs</Typography>
+                <img src={memories} alt="memories" height="90" width="50"/>
             </AppBar>
             <Grow in>
                 <Container>
@@ -32,7 +32,6 @@ const App = () => {
                         <Grid item xs={12} sm={4}>
                             <Form />
                         </Grid>
-
                     </Grid>
                 </Container>
             </Grow>
