@@ -5,9 +5,11 @@
     the form is the template the user will fill out to make a post to the wall.
     it allows the user to select an image from their device to add with what they wrote. 
 ### `handleSubmit`
-    the handleSubmit logic uses a preventDefault(); to protect from refreshing and dispatches a createPost request with the post data already initialized
+    the handleSubmit logic uses a preventDefault(); to protect from refreshing 
+    and dispatches a createPost request with the post data already initialized
 ### Media
-    the media is taken into a FileBase which is a file which sets the data for the file in base64 from react-file-base64  
+    the media is taken into a FileBase which is a file which sets the data 
+    for the file in base64 from react-file-base64  
 
 
 
