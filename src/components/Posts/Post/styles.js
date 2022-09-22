@@ -38,15 +38,17 @@ export default makeStyles()({
   },
   details: {
     display: 'flex',
+    marginLeft: '15px',
     justifyContent: 'space-between',
-    margin: '20px',
   },
   title: {
-    padding: '0 16px',
+    fontSize: '16px', 
+    padding: '16px 0',
   },
   cardActions: {
     padding: '0 16px 8px 16px',
     display: 'flex',
     justifyContent: 'space-between',
+    alignContent: 'center'
   },
 });
