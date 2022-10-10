@@ -3,6 +3,7 @@ import React from 'react';
 import * as ReactDOMClient from 'react-dom/client';
 import { Provider } from 'react-redux';  //Provider allows us to access state anytime in the app 
 import { configureStore } from '@reduxjs/toolkit';
+import { GoogleOAuthProvider } from '@react-oauth/google';
 
 import reducers from './reducers';
 
@@ -16,7 +17,9 @@ const container = document.getElementById('root');
 const root = ReactDOMClient.createRoot(container);
 root.render(
     <Provider store={store}>
-        <App /> 
+        {/* <GoogleOAuthProvider clientId="220127504556-i0hsarqea6n8jppavtk1no3mlm8o1b1p.apps.googleusercontent.com"> */}
+        <App />
+        {/* </GoogleOAuthProvider> */}
     </Provider>
 );
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { TextField, Button, Typography, Paper } from "@mui/material";
+import { TextField, Button, Typography, Paper, FormControl } from "@mui/material";
 import FileBase from "react-file-base64";
 import { useDispatch, useSelector } from "react-redux";
 import useStyles from "./styles";
@@ -40,36 +40,16 @@ const Form = ({ currentId, setCurrentId }) => {
   };
 
   const clear = () => {
-    setCurrentId = null;
-    setPostData({
-      creator: "",
-      title: "",
-      message: "",
-      tags: "",
-      selectedFile: "",
-    });
+    setCurrentId(null);
+    setPostData({ creator: "", title: "", message: "", tags: "", selectedFile: "", });
   };
   //where we are storing the data. Whole data in post is going to be put in state
 
   return (
     <Paper className={classes.Paper}>
-      <form
-        autoComplete="off"
-        noValidate
-        className={`${classes.root} ${classes.form}`}
-        onSubmit={handleSubmit}
-      >
-        <Typography marginTop={'16px'} variant="h6">{currentId ? 'Editing' : 'Creating'} a Memory</Typography>
-        <TextField
-          name="creator"
-          variant="outlined"
-          label="Creator"
-          fullwidth
-          value={postData.creator}
-          onChange={(e) =>
-            setPostData({ ...postData, creator: e.target.value })
-          }
-        />
+      <FormControl autoComplete="off" noValidate className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit} >
+        <Typography alignSelf="center" variant="h5" marginTop="13px">{currentId ? 'Editing' : 'Creating'} a Memory</Typography>
+        <TextField name="creator" variant="outlined" label="Creator" fullwidth value={postData.creator} onChange={(e) => setPostData({ ...postData, creator: e.target.value }) } />
         <TextField
           name="title"
           variant="outlined"
@@ -110,7 +90,6 @@ const Form = ({ currentId, setCurrentId }) => {
             color="primary"
             size="large"
             type="submit"
-            fullWidth
           >
             Submit
           </Button>
@@ -120,12 +99,11 @@ const Form = ({ currentId, setCurrentId }) => {
             color="secondary"
             size="small"
             onClick={clear}
-            fullWidth
           >
             Clear
           </Button>
         </div>
-      </form>
+      </FormControl>
     </Paper>
   );
 };

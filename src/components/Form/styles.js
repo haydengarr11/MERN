@@ -9,22 +9,29 @@ export default makeStyles()((theme) => ({
   paper: {
     padding: theme.spacing(3),
     width: '14em',
-    height: '26em'
+    height: '27em'
   },
   form: {
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'center',
-    padding: '0 10px',
   },
   fileInput: {
+    display: 'flex',
     width: '97%',
-    margin: '10px 0',
+    marginLeft: '25px',
+    marginTop: '5px',
   },
   buttonSubmit: {
-    margin: '10px 0 10px 0',
+    display: 'flex',
+    width: '97%',
+    marginLeft: '6px',
+    marginTop: '5px',
+    marginBottom: '10px'
   },
   buttonClear: {
-    margin: '0 0 10px 0',
-  }
+    width: '97%',
+    marginLeft: '5px',
+    marginBottom: '6px',
+  },
 }));
